@@ -151,8 +151,47 @@ body{
     padding: 5px;
 }
 
-.Tasks{
+.Tasks-Container{
     height: 55%;
     width:100%;
+    padding: 20px 0;
 
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.Tasks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0 40px;
+}
+
+.Tasks h1{
+    font-size: 15px;
+}
+
+.Tasks-Icons{
+    display: flex;
+    gap: 2rem;
+}
+
+.Tasks-Icons i{
+    cursor: pointer;
+
+    transition: .5s;
+}
+
+.Tasks-Icons i:hover:nth-child(2){
+    color: red;
+
+    transform: rotate(360deg);
+}
+
+.Tasks-Icons i:hover:nth-child(1){
+    color: var(--border-color);
+
+    transform: rotate(360deg);
 }
