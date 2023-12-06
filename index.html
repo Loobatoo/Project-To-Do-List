@@ -32,13 +32,13 @@
                 </div>
             </div>
             <div class="Filter">
-                <p> Filtro: </p>
-                <select name="" id="">
-                    <option value=""> Todos </option>
-                    <option value=""> Completo </option>
-                    <option value=""> A fazer </option>
+                <p>Filtro:</p>
+                <select id="TaskFilter">
+                    <option value="all">Todos</option>
+                    <option value="complete">Completo</option>
+                    <option value="todo">A fazer</option>
                 </select>
-            </div>
+            </div>            
         </div>
         <div class="Tasks-Container">
             
@@ -47,8 +47,10 @@
 </body>
 <script src="/JavaScript/AddTask.js" defer></script>
 <script src="/JavaScript/RemoveTask.js" defer></script>
-<script src="/JavaScript/FilterTask.js" defer></script>
-<script src="/JavaScript/CompleteTask.js"></script>
+<script src="/JavaScript/Filter.js" defer></script>
+<script src="/JavaScript/CompleteTask.js" defer></script>
+<script src="/JavaScript/SearchTask.js" defer></script>
+
 
 
 <script src="https://kit.fontawesome.com/878dc2ab24.js" crossorigin="anonymous" defer></script>

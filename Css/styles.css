@@ -47,6 +47,8 @@ body{
 }
 
 .AddTask{
+    margin-top: 5%;
+
     height: 20%;
     width: 100%;
 
@@ -170,13 +172,26 @@ body{
 }
 
 .Tasks-Container{
-    height: 55%;
+    height: 50%;
     width:100%;
     padding: 20px 0;
+    overflow: auto;
 
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+.Tasks-Container::-webkit-scrollbar {
+    width: 5px; 
+}
+
+.Tasks-Container::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);  
+}
+
+.Tasks-Container::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
 }
 
 .Tasks{
@@ -216,4 +231,6 @@ body{
 
 .TaskCompleta{
     text-decoration: line-through;
+
+    opacity: 0.5;
 }
