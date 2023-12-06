@@ -5,6 +5,7 @@ const TasksContainer = document.querySelector(".Tasks-Container");
 const AddTask = (TaskTitle) => {
     const taskBody = document.createElement("div");
     taskBody.className = "Tasks";
+    taskBody.setAttribute("data-title", TaskTitle);
 
     taskBody.innerHTML = `
         <h1> ${TaskTitle} </h1>
@@ -15,25 +16,19 @@ const AddTask = (TaskTitle) => {
     `;
 
     TasksContainer.appendChild(taskBody);
-}
 
-const RemoveTask = (TaskIdentificator) => {
-    const taskDiv = TaskIdentificator.closest(".Tasks");
-    TasksContainer.removeChild(taskDiv);
+    const checkIcon = taskBody.querySelector(".fa-check");
+    checkIcon.addEventListener("click", () => {
+        CompleteTask(checkIcon);
+    });
 }
 
 BtnInputTask.addEventListener("click", () => {
-    AddTask(InputTask.value);
+    if (InputTask.value === ''){
+        alert("Digite o nome da tarefa!")
+    } else {
+        AddTask(InputTask.value);
 
-    InputTask.value = '';
-});
-
-let BtnRemoveTask;
-
-BtnRemoveTask = document.querySelector("#Remove-Task");
-
-if (BtnRemoveTask) {
-    BtnRemoveTask.addEventListener("click", () => {
-        RemoveTask(BtnRemoveTask);
-    });
-}
+        InputTask.value = '';
+    }
+}); 

@@ -75,6 +75,15 @@ body{
     width: 30px;
     
     cursor: pointer;
+
+    transition: .5s;
+}
+
+.Input-AddTask i:hover{
+    color: var(--border-color);
+
+    font-size: 20px;
+    transform: rotate(360deg);
 }
 
 .Input-AddTask input{
@@ -122,6 +131,15 @@ body{
     width: 30px;
 
     cursor: pointer;
+
+    transition: .5s;
+}
+
+.Input-Search i:hover{
+    font-size: 20px;
+    transform: rotate(360deg);
+
+    color: var(--border-color);
 }
 
 .Input-Search input{
@@ -191,7 +209,11 @@ body{
 }
 
 .Tasks-Icons i:hover:nth-child(1){
-    color: var(--border-color);
+    color: green;
 
     transform: rotate(360deg);
+}
+
+.TaskCompleta{
+    text-decoration: line-through;
 }
